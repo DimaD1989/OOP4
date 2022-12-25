@@ -40,6 +40,8 @@ public class Team <T extends Warrior> implements Iterable<T> {
         }
         return health;
     }
+
+
     public int getMaxRadius() {
         int maxRange = 0;
         for (T item : this) {
@@ -52,5 +54,19 @@ public class Team <T extends Warrior> implements Iterable<T> {
             }
         }
         return maxRange;
+    }
+
+    public int getMaxArmor() {
+        int maxArmor = 0;
+        for (T item : this) {
+            Armor armor = item.getArmor();
+            if (armor instanceof Gear) {
+                Gear gear = (Gear) armor;
+                if (maxArmor < gear.armoring()) {
+                    maxArmor = gear.armoring();
+                }
+            }
+        }
+        return maxArmor;
     }
 }

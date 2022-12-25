@@ -1,10 +1,10 @@
-public class Archer extends Warrior<Bow>{
-    public Archer(String name, int healthpoint, Bow bow) {
-        super(name, healthpoint, bow);
+public class Archer extends Warrior<Bow,Shield,Armor>{
+    public Archer(String name, int healthpoint, Bow bow,Shield shield,Armor armor) {
+        super(name, healthpoint, bow, shield,armor);
     }
 
     @Override
     public String toString() {
-        return "Лучник: "+super.toString();
+        return "Лучник: " + super.toString();
     }
 }

@@ -1,6 +1,6 @@
-public class Comandor extends  Warrior<Weapon>{
-    public Comandor(String name, int healthpoint, Weapon weapon) {
-        super(name, healthpoint, weapon);
+public class Comandor extends  Warrior<Weapon,Protection,Armor>{
+    public Comandor(String name, int healthpoint, Weapon weapon,Protection protection,Armor armor) {
+        super(name, healthpoint, weapon, protection,armor);
     }
 
     @Override
